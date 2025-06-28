@@ -1,0 +1,43 @@
+[2025-06-26T12:25:26.372074+00:00] main.INFO: Source table payment_services_order_status_data_production_submitted_hash does not exist. Skipping data migration... [] []
+[2025-06-27T05:32:08.874894+00:00] main.INFO: Source table payment_services_order_status_data_production_submitted_hash does not exist. Skipping data migration... [] []
+[2025-06-27T05:32:23.002264+00:00] main.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'magento.design_config_grid_flat' doesn't exist, query was: DELETE FROM `design_config_grid_flat`
+#0 /var/www/html/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(614): Magento\Framework\DB\Adapter\Pdo\Mysql->performQuery(Object(Closure))
+#1 /var/www/html/vendor/magento/framework/DB/Adapter/Pdo/Mysql.php(703): Magento\Framework\DB\Adapter\Pdo\Mysql->_query('DELETE FROM `de...', Array)
+#2 /var/www/html/generated/code/Magento/Framework/DB/Adapter/Pdo/Mysql/Interceptor.php(95): Magento\Framework\DB\Adapter\Pdo\Mysql->query('DELETE FROM `de...', Array)
+#3 /var/www/html/vendor/magento/zend-db/library/Zend/Db/Adapter/Abstract.php(664): Magento\Framework\DB\Adapter\Pdo\Mysql\Interceptor->query('DELETE FROM `de...')
+#4 /var/www/html/generated/code/Magento/Framework/DB/Adapter/Pdo/Mysql/Interceptor.php(1076): Zend_Db_Adapter_Abstract->delete('design_config_g...', '')
+#5 /var/www/html/vendor/magento/module-theme/Model/Indexer/Design/IndexerHandler.php(69): Magento\Framework\DB\Adapter\Pdo\Mysql\Interceptor->delete('design_config_g...')
+#6 /var/www/html/vendor/magento/module-theme/Model/Indexer/Design/Config.php(102): Magento\Theme\Model\Indexer\Design\IndexerHandler->cleanIndex(Array)
+#7 /var/www/html/vendor/magento/module-theme/Model/Indexer/Design/Config.php(115): Magento\Theme\Model\Indexer\Design\Config->execute()
+#8 /var/www/html/vendor/magento/framework/Interception/Interceptor.php(58): Magento\Theme\Model\Indexer\Design\Config->executeFull()
+#9 /var/www/html/vendor/magento/framework/Interception/Interceptor.php(138): Magento\Theme\Model\Indexer\Design\Config\Interceptor->___callParent('executeFull', Array)
+#10 /var/www/html/vendor/magento/framework/Interception/Interceptor.php(153): Magento\Theme\Model\Indexer\Design\Config\Interceptor->Magento\Framework\Interception\{closure}()
+#11 /var/www/html/generated/code/Magento/Theme/Model/Indexer/Design/Config/Interceptor.php(23): Magento\Theme\Model\Indexer\Design\Config\Interceptor->___callPlugins('executeFull', Array, Array)
+#12 /var/www/html/vendor/magento/module-indexer/Model/Indexer.php(455): Magento\Theme\Model\Indexer\Design\Config\Interceptor->executeFull()
+#13 /var/www/html/generated/code/Magento/Indexer/Model/Indexer/Interceptor.php(239): Magento\Indexer\Model\Indexer->reindexAll()
+#14 /var/www/html/vendor/magento/module-indexer/Model/Indexer/DependencyDecorator.php(268): Magento\Indexer\Model\Indexer\Interceptor->reindexAll()
+#15 /var/www/html/generated/code/Magento/Indexer/Model/Indexer/DependencyDecorator/Interceptor.php(212): Magento\Indexer\Model\Indexer\DependencyDecorator->reindexAll()
+#16 /var/www/html/vendor/magento/module-theme/Setup/RecurringData.php(51): Magento\Indexer\Model\Indexer\DependencyDecorator\Interceptor->reindexAll()
+#17 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1116): Magento\Theme\Setup\RecurringData->install(Object(Magento\Setup\Module\DataSetup), Object(Magento\Setup\Model\ModuleContext))
+#18 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(965): Magento\Setup\Model\Installer->handleDBSchemaData(Object(Magento\Setup\Module\DataSetup), 'data', Array)
+#19 [internal function]: Magento\Setup\Model\Installer->installDataFixtures(Array)
+#20 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(407): call_user_func_array(Array, Array)
+#21 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(237): Magento\Setup\Model\Installer->install(Array)
+#22 /var/www/html/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /var/www/html/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /var/www/html/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /var/www/html/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /var/www/html/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#28 {main} [] []
+[2025-06-27T05:35:07.886031+00:00] main.INFO: Source table payment_services_order_status_data_production_submitted_hash does not exist. Skipping data migration... [] []
+[2025-06-27T05:41:20.237006+00:00] main.ERROR: crontab -l 2>/dev/null 2>&1
+no crontab for app [] []
+[2025-06-27T05:41:20.240272+00:00] main.ERROR: crontab -l 2>/dev/null 2>&1
+no crontab for app [] []
+[2025-06-27T05:41:20.295943+00:00] main.INFO: echo "
+#~ MAGENTO START 69dd2b02e1f3a65918182048ea4e29979a849d8942e8f53ed20a4bf10e529b36
+* * * * * /usr/local/bin/php /var/www/html/bin/magento cron:run 2>&1 | grep -v \"Ran jobs by schedule\" >> /var/www/html/var/log/magento.cron.log
+#~ MAGENTO END 69dd2b02e1f3a65918182048ea4e29979a849d8942e8f53ed20a4bf10e529b36
+" 2>&1 | crontab - 2>&1
+ [] []

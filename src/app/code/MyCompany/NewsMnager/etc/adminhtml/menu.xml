@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MyCompany_NewsManager::news_manager"
+             title="News Manager"
+             module="MyCompany_NewsManager"
+             sortOrder="100"
+             resource="MyCompany_NewsManager::news_manager"/>
+        <add id="MyCompany_NewsManager::news"
+             title="Manage News"
+             module="MyCompany_NewsManager"
+             sortOrder="10"
+             action="newsmanager/news"
+             resource="MyCompany_NewsManager::news"
+             parent="MyCompany_NewsManager::news_manager"/>
+        <add id="MyCompany_NewsManager::categories"
+             title="Manage Categories"
+             module="MyCompany_NewsManager"
+             sortOrder="20"
+             action="newsmanager/category"
+             resource="MyCompany_NewsManager::categories"
+             parent="MyCompany_NewsManager::news_manager"/>
+    </menu>
+</config>
